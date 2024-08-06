@@ -32,4 +32,4 @@ conda deactivate
 
 # Runs iqtree
 conda activate snippy
-iqtree2 -s ../results/ -nt 8 -mem 8GB -m HKY+F -B 2000
+iqtree2 -s ../results/core_gene_alignment_filtered.aln -nt 8 -mem 8GB  -B 20000 
