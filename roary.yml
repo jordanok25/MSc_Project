@@ -1,0 +1,8 @@
+name: roary
+channels:
+    - r
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - roary
