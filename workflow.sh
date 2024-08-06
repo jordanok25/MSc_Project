@@ -17,13 +17,6 @@ do
 done
 conda deactivate	
 
-# Runs roary
-source activate roary
-enc2xs -C
-cpan File::Find::Rule
-roary -p 6 -e -n -f alignment *.gff
-conda deactivate 
-
 # Runs panaroo
 source activate panaroo
 mkdir ../results
@@ -31,5 +24,5 @@ panaroo -i *.gff -o ../results -t 6 -a core --aligner mafft --clean-mode moderat
 conda deactivate
 
 # Runs iqtree
-conda activate snippy
+source activate snippy
 iqtree2 -s ../results/core_gene_alignment_filtered.aln -nt 8 -mem 8GB  -B 20000 
